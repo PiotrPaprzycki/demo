@@ -10,16 +10,11 @@ public class UserRepository {
 
     private List<User> userList = new ArrayList<>();
 
-    User user = new User("Piotr", "Paprzycki", 22);
-    User user1 = new User("Lukasz", "Kowalski", 21);
-    User user2 = new User("Ula", "Walaszek", 29);
-
-
     public UserRepository(List<User> userList) {
         this.userList = userList;
-        userList.add(user);
-        userList.add(user1);
-        userList.add(user2);
+        userList.add(new User("Piotr", "Paprzycki", 22));
+        userList.add(new User("Lukasz", "Kowalski", 21));
+        userList.add(new User("Ula", "Walaszek", 29));
     }
 
     public List<User> getAll() {
@@ -30,11 +25,4 @@ public class UserRepository {
         userList.add(user);
     }
 
-    public String printUserList() {
-        String usersDetails = "";
-        for (User user : userList) {
-            usersDetails += (user.getName() + " " + user.getSurname() + " " + user.getAge() + "<br/>");
-        }
-        return usersDetails;
-    }
 }
