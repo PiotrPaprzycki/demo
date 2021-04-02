@@ -8,10 +8,9 @@ import java.util.List;
 @Repository
 public class UserRepository {
 
-    private List<User> userList = new ArrayList<>();
+    private final List<User> userList = new ArrayList<>();
 
     public UserRepository(List<User> userList) {
-        this.userList = userList;
         userList.add(new User("Piotr", "Paprzycki", 22));
         userList.add(new User("Lukasz", "Kowalski", 21));
         userList.add(new User("Ula", "Walaszek", 29));
