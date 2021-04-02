@@ -19,7 +19,9 @@ public class UserController {
     public String usersList() {
         StringBuilder usersDetails = new StringBuilder();
         for (User user : userRepository.getAll()) {
-            usersDetails.append(user.getName() + " " + user.getSurname() + " " + user.getAge() + "<br/>");
+            usersDetails.append(user.getName()).append(" ")
+                    .append(user.getSurname()).append(" ").append(user.getAge())
+                    .append("<br/>");
         }
         return usersDetails.toString();
 
